@@ -136,6 +136,8 @@ def continue_meal_plan(profile, previous_output):
     except Exception as e:
         return f"Error in continuation: {str(e)}"
 
+# UNUSED CODE, WILL UPDATE LATER
+
 def recognize_food(image_data):
     """
     Recognizes food items in an image using the Google Gemini API.
@@ -186,7 +188,7 @@ def extract_nutritional_analysis(analysis_text):
       return analysis_text.split("Nutritional Analysis:")[1]
     else:
       return "No nutritional analysis available."
-
+#END OF UNUSED CODEBLOCK 1
 
 # -----------------------------
 # Main Streamlit UI
@@ -265,7 +267,7 @@ def main():
                 st.markdown("### Your Complete 7-Day Meal Plan")
                 st.write(st.session_state.meal_plan)
 
-# meal pplan history logging implementation
+# meal pplan history logging implementation, UNUSED CODEBLOCK2
 
 
    # # --- Food Recognition & Logging ---
@@ -296,6 +298,7 @@ def main():
                                 st.json(food_info["raw_data"])
                     else:
                         st.error(food_info)
+                        #END OF UNUSED CODEBLOCK 2
 
 if __name__ == "__main__":
     main()
